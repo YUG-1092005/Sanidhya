@@ -1,0 +1,152 @@
+.cards {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 3.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.card1,
+.card2,
+.card3 {
+  height: 400px;
+  flex: 1 1 calc(33.33% - 2rem);
+  max-width: 430px;
+  box-sizing: border-box;
+  border: 1px solid #979797;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.cards h2 {
+  font-size: 1.8em;
+  margin-block-start: 0.7em;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+  color: #163e5e;
+}
+
+.arrow-el {
+  color: #1c5e94;
+  font-size: 39px;
+}
+
+.card1:hover {
+  border: 1px solid #fff;
+  border-right: none;
+  box-shadow: 0 19px 25px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card2:hover {
+  border: 1px solid #fff;
+  border-right: none;
+  box-shadow: 0 19px 25px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card3:hover {
+  border: 1px solid #fff;
+  border-right: none;
+  box-shadow: 0 19px 25px 0 rgba(0, 0, 0, 0.19);
+}
+
+.homeimg {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 100%;
+  height: 85%;
+  object-fit: cover;
+  display: block;
+}
+
+@media screen and (max-width: 1400px) {
+  .card1,
+  .card2,
+  .card3 {
+    height: 350px;
+    flex: 1 1 calc(33.33% - 2rem);
+    max-width: 400px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .card1,
+  .card2,
+  .card3 {
+    height: 380px;
+    flex: 1 1 calc(33.33% - 2rem);
+    max-width: 380px;
+  }
+}
+
+@media screen and (max-width: 1245px) {
+  .card1,
+  .card2,
+  .card3 {
+    height: 350px;
+    flex: 1 1 calc(33.33% - 2rem);
+    max-width: 350px;
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  .card1,
+  .card2,
+  .card3 {
+    height: 350px;
+    flex: 1 1 calc(33.33% - 2rem);
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .card1,
+  .card2,
+  .card3 {
+    height: 300px;
+    flex: 1 1 calc(33.33% - 2rem);
+    max-width: 285px;
+  }
+}
+
+@media (max-width: 991px) and (min-width: 800px) {
+  .card1, .card2, .card3 {
+    margin: 10px;
+    width: 350px; 
+    height: 400px;
+  }
+}
+
+@media (max-width: 800px) and (min-width: 700px) {
+  .card1, .card2, .card3 {
+    margin: 10px;
+    width: 300px; 
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 781px) {
+  .card1, .card2, .card3 {
+    margin: 10px;
+    width: 300px; 
+    height: 350px;
+  }
+}
+
+@media (max-width: 500px) {
+  .cards {
+    flex-direction: column; 
+    align-items: center; 
+    gap: 1.5rem; /
+  }
+
+  .card1,
+  .card2,
+  .card3 {
+    margin-bottom: 2rem; 
+    height: 350px;
+    flex: 1 1 calc(33.33% - 2rem);
+    max-width: 300px;
+  }
+}

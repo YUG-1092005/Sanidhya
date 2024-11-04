@@ -1,0 +1,97 @@
+.call-request-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.call-request-form {
+  background-color: white;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+  max-height: 70vh;
+  overflow-y: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.call-request-form input,
+.call-request-form select,
+.call-request-form button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.call-request-form button {
+  background: #37b7c3;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+  margin-top: 5px;
+}
+
+.call-req-heading {
+  text-align: center;
+}
+
+.close-form {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: black;
+  transition: 0.3s ease-in;
+}
+
+@media (max-width: 768px) {
+  .call-request-form {
+    width: 90%;
+    padding: 1.5rem;
+    max-height: 60vh;
+  }
+
+  .call-request-form input,
+  .call-request-form select,
+  .call-request-form button {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .call-request-form {
+    width: 95%;
+    padding: 1rem;
+    max-height: 45vh;
+  }
+
+  .call-request-form input,
+  .call-request-form select,
+  .call-request-form button {
+    font-size: 0.8rem;
+  }
+
+  .close-form {
+    font-size: 1.3rem;
+  }
+}

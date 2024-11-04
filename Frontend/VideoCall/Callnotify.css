@@ -1,0 +1,33 @@
+.call-notification-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.call-notification-container h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+@media (min-width: 600px) {
+  .call-notification-container {
+    flex-direction: row;
+  }
+  .call-notification-container h2 {
+    font-size: 28px;
+  }
+  .answer-btn {
+    width: 20%;
+  }
+}
+
+@media (max-width: 600px) {
+  .answer-btn {
+    width: 100%;
+    margin-top: 5px;
+  }
+}

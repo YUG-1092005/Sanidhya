@@ -1,0 +1,49 @@
+.video-call-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.video-call-heading-parent-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+}
+
+.video-call-heading-div {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  justify-content: center;
+  background-color: #088395;
+  margin-top: 3rem;
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.video-call-heading {
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .video-call-heading {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-call-heading-div {
+    padding: 12px;
+  }
+  .video-call-heading {
+    font-size: 18px;
+  }
+}

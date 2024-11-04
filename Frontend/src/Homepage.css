@@ -1,0 +1,136 @@
+.text {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.text h1 {
+  font-weight: 400;
+}
+
+.typing-text {
+  display: inline-block;
+  border-right: 2px solid;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 2s steps(10) infinite, cursor 1s step-end infinite;
+  font-size: 2.3rem;
+  font-weight: 600;
+  color: #144b79;
+}
+
+/* Typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 9ch;
+  }
+}
+
+@keyframes cursor {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+
+.getting-started {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.start-btn {
+  width: 8.5rem;
+  height: 3rem;
+  border-radius: 5px;
+  font-size: large;
+  font-weight: 500;
+  border: none;
+  background-color: #80bcbd;
+  transition: box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.about-btn {
+  width: 7rem;
+  height: 3rem;
+  border-radius: 5px;
+  font-size: large;
+  font-weight: 500;
+  border: none;
+  background-color: #92c7cf;
+  transition: box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.start-btn:hover {
+  border: 0.5px solid rgb(157, 157, 230);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.about-btn:hover {
+  border: 0.5px solid rgb(157, 157, 230);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 1100px) {
+  .text {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 885px) {
+  .text {
+    font-size: 0.7rem;
+  }
+  .typing-text {
+    font-size: 2rem;
+  }
+  .about-btn {
+    width: 6rem;
+    height: 3rem;
+    font-size: medium;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .text {
+    font-size: 0.6rem;
+  }
+  .typing-text {
+    font-size: 1.6rem;
+  }
+  .start-btn {
+    width: 6.5rem;
+    height: 3rem;
+    font-size: 14px;
+  }
+  .about-btn {
+    width: 6rem;
+    height: 3rem;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .text {
+    font-size: 0.4rem;
+  }
+  .typing-text {
+    font-size: 1.5rem;
+  }
+  .start-btn {
+    width: 6rem;
+    height: 2.5rem;
+    font-size: 12px;
+  }
+  .about-btn {
+    width: 5rem;
+    height: 2.5rem;
+    font-size: 12px;
+  }
+}

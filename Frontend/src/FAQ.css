@@ -1,0 +1,42 @@
+.accordion {
+  gap: 5rem !important;
+}
+
+@media screen and (max-width: 1000px) {
+  .faq-que {
+    font-size: 1.2rem !important;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .faq-que {
+    font-size: 1.1rem !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .faq-heading h2 {
+    font-size: 2.3rem !important;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .faq-que {
+    font-size: 1rem !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .faq-heading h2 {
+    font-size: 2rem !important;
+  }
+  .faq-que {
+    font-size: 0.9rem !important;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .faq-heading h2 {
+    font-size: 1.8rem !important;
+  }
+}

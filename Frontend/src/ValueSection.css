@@ -1,0 +1,376 @@
+.values {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
+
+.value-heading {
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #163e5e;
+  border: 1.5px solid #979797;
+  width: 22rem;
+  background-color: rgb(255, 255, 255);
+  height: 5.5rem;
+  border-radius: 25px;
+  justify-content: center;
+  transition: 0.2s ease-in-out;
+  line-height: 2px;
+  margin-top: 1.5rem;
+}
+
+.value-left-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.value-img-div {
+  width: 25rem;
+  height: 25rem;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.value-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.value-content p {
+  line-height: 3rem;
+  letter-spacing: 1.2px;
+  font-size: 1.3rem;
+  opacity: 0.8;
+  font-weight: 500;
+}
+
+.value-subheading {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  color: #163e5e;
+}
+
+.value-bar {
+  background-color: #979797;
+  display: inline-block;
+  height: 1px;
+  width: 100%;
+}
+
+.value-heading:hover {
+  border: 1px solid #fff;
+  border-right: none;
+  box-shadow: 0 19px 25px 0 rgba(0, 0, 0, 0.19);
+  background-color: rgb(241, 246, 250);
+}
+
+.values {
+  margin-top: 4rem;
+}
+
+@media screen and (max-width: 1501px) {
+  .value-heading {
+    font-size: 1.2rem;
+    width: 20rem;
+  }
+  .value-subheading {
+    font-size: 1.1rem;
+  }
+  .value-content {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .value-heading {
+    font-size: 1.1rem;
+    width: 18rem;
+  }
+
+  .value-content p {
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+  }
+  .value-subheading {
+    font-size: 1rem;
+  }
+  .value-content {
+    width: 55%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .value-img-div {
+    width: 23rem;
+    height: 23rem;
+  }
+  .value-heading {
+    font-size: 1rem;
+    width: 17rem;
+  }
+  .value-subheading {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .value-img-div {
+    width: 22rem;
+    height: 22rem;
+  }
+  .value-heading {
+    font-size: 1rem;
+    width: 16rem;
+  }
+  .value-subheading {
+    font-size: 0.9rem;
+  }
+  .value-content p {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+  .value-content {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .value-img-div {
+    width: 21rem;
+    height: 21rem;
+  }
+  .value-heading {
+    font-size: 0.9rem;
+    width: 15rem;
+  }
+  .value-content p {
+    font-size: 1rem;
+    line-height: 1.8rem;
+  }
+  .value-subheading {
+    font-size: 0.8rem;
+  }
+  .value-content p {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+  .value-content {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .value-img-div {
+    width: 20rem;
+    height: 20rem;
+  }
+  .value-heading {
+    font-size: 0.8rem;
+    width: 14rem;
+  }
+  .value-content p {
+    font-size: 1rem;
+    line-height: 1.8rem;
+  }
+  .value-subheading {
+    font-size: 0.7rem;
+  }
+  .value-content p {
+    font-size: 0.9rem;
+    line-height: 1.8rem;
+  }
+  .value-content {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 781px) {
+  .values {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .value-img-div {
+    width: 27rem;
+    height: 27rem;
+  }
+  .value-heading {
+    font-size: 1.3rem;
+    width: 20rem;
+  }
+  .value-content p {
+    font-size: 1rem;
+    line-height: 1.8rem;
+  }
+  .value-subheading {
+    font-size: 1rem;
+  }
+  .value-content p {
+    font-size: 1rem;
+    line-height: 1.8rem;
+  }
+  .value-content {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .values {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .value-img-div {
+    width: 25rem;
+    height: 25rem;
+  }
+  .value-heading {
+    font-size: 1.1rem;
+    width: 18rem;
+  }
+  .value-content p {
+    font-size: 1rem;
+    line-height: 1.8rem;
+  }
+  .value-subheading {
+    font-size: 0.9rem;
+  }
+  .value-content p {
+    font-size: 0.9rem;
+    line-height: 1.8rem;
+  }
+  .value-content {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .values {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .value-img-div {
+    width: 23rem;
+    height: 23rem;
+  }
+  .value-heading {
+    font-size: 1rem;
+    width: 16rem;
+  }
+  .value-content p {
+    font-size: 1rem;
+    line-height: 1.8rem;
+  }
+  .value-subheading {
+    font-size: 0.8rem;
+  }
+  .value-content p {
+    font-size: 0.9rem;
+    line-height: 1.8rem;
+  }
+  .value-content {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .values {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .value-img-div {
+    width: 20rem;
+    height: 20rem;
+  }
+  .value-heading {
+    font-size: 0.9rem;
+    width: 14rem;
+  }
+  .value-content p {
+    font-size: 1rem;
+    line-height: 1.8rem;
+  }
+  .value-subheading {
+    font-size: 0.7rem;
+  }
+  .value-content p {
+    font-size: 0.8rem;
+    line-height: 1.7rem;
+  }
+  .value-content {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .values {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .value-img-div {
+    width: 18rem;
+    height: 18rem;
+  }
+  .value-heading {
+    font-size: 0.8rem;
+    width: 13rem;
+  }
+  .value-content p {
+    font-size: 1rem;
+    line-height: 1.8rem;
+  }
+  .value-subheading {
+    font-size: 0.6rem;
+  }
+  .value-content p {
+    font-size: 0.8rem;
+    line-height: 1.6rem;
+  }
+  .value-content {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .values {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .value-img-div {
+    width: 16rem;
+    height: 16rem;
+  }
+  .value-heading {
+    font-size: 0.7rem;
+    width: 12rem;
+  }
+  .value-content p {
+    font-size: 0.9rem;
+    line-height: 1.8rem;
+  }
+  .value-subheading {
+    font-size: 0.6rem;
+  }
+  .value-content p {
+    font-size: 0.8rem;
+    line-height: 1.6rem;
+  }
+  .value-content {
+    width: 80%;
+  }
+}

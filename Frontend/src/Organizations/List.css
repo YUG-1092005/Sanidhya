@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+}
+
+.org-card {
+  background-color: #fff;
+  border-radius: 20px;
+  width: 100%;
+  position: relative;
+}
+
+.org-card::before {
+  content: "";
+  position: absolute;
+  height: 40%;
+  width: 100%;
+  background-color: #37b7c3;
+  border-radius: 20px 20px 0 0;
+}
+
+.org-card .org-image-div {
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+  background: #37b7c3;
+  padding: 9px;
+}
+
+.org-card .org-image-div img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+.org-card-container {
+  flex: 0 1 30%;
+  margin: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.org-card .org-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 25px;
+  position: relative;
+  z-index: 100;
+}
+
+.org-card .org-data {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #333;
+  margin-top: 1.5rem;
+  gap: 5px;
+}
+
+.org-name {
+  font-size: 23px;
+  font-weight: 600;
+  padding: 5px;
+}
+
+.org-place,
+.org-description {
+  font-size: 17px;
+  font-weight: 500;
+  opacity: 0.9;
+  padding: 5px;
+}
+
+.org-card .view-more-btn {
+  background: #37b7c3;
+  color: #fff;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  font-size: 17px;
+  padding: 10px 24px;
+  transition: 0.3s ease-in-out;
+  margin: 5px;
+}
+
+.org-card .view-more-btn:hover {
+  cursor: pointer;
+  background: #6dd5e1;
+  box-shadow: 0 19px 26px 0 transparent, 0 3px 9px 0 rgba(48, 229, 252, 0.5);
+}
+
+@media (min-width: 1300px) and (max-width: 1499px) {
+  .org-card-container {
+    flex: 0 1 30%;
+    margin: 1rem;
+  }
+  .org-container {
+    padding: 1rem !important;
+    margin-top: 1rem !important;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1300px) {
+  .org-card-container {
+    flex: 1 1 45%;
+    margin: 1rem;
+  }
+  .org-container {
+    padding: 1rem !important;
+    margin-top: 1rem !important;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .org-card-container {
+    flex: 1 1 45%;
+    margin: 1rem;
+  }
+  .org-container {
+    padding: 1rem !important;
+    gap: 2rem;
+    margin-top: 1rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .org-card-container {
+    flex: 1 1 100%;
+    margin: 0.5rem;
+  }
+  .org-container {
+    margin-top: 1rem !important;
+    gap: 2rem;
+  }
+}

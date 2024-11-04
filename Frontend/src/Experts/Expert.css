@@ -1,0 +1,344 @@
+.expert-details-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 1rem;
+  height: 100%;
+}
+
+h1,
+h2 {
+  color: #132c42;
+}
+
+.expert-details-container h1 {
+  font-size: 2.3rem;
+}
+
+.expert-details-container .expert-details-image {
+  height: 250px;
+  width: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 2px 2px 2px 2px #132c42;
+}
+
+.expert-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.details-div {
+  display: flex;
+  align-items: center;
+  width: 600px;
+  column-gap: 1rem;
+}
+
+.expert-details h2 {
+  font-size: 27px;
+}
+
+.details-options {
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+}
+
+.icon-row {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.expert-details-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  padding: 10px;
+}
+
+.expert-details p {
+  color: #0d2337;
+  font-size: 20px;
+  opacity: 0.9;
+  letter-spacing: 0.3px;
+}
+
+.edit-btn {
+  height: 2.5rem;
+  width: 8rem;
+  font-size: 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #0d2337;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease;
+  padding: 10px;
+}
+.edit-btn:hover {
+  background-color: #1c4264;
+  box-shadow: 0 19px 26px 0 rgba(107, 180, 253, 0.4),
+    0 5px 12px 0 rgba(107, 180, 253, 0.9);
+}
+
+@media screen and (max-width: 800px) {
+  .expert-details h2 {
+    font-size: 23px;
+  }
+  .expert-details-container .expert-details-image {
+    height: 200px;
+    width: 200px;
+  }
+  .expert-details p {
+    font-size: 16px;
+    letter-spacing: 0.3px;
+  }
+
+  .details-div {
+    padding: 13px;
+    width: 550px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .expert-details h2 {
+    font-size: 20px;
+  }
+
+  .expert-details-container h1 {
+    font-size: 1.8rem;
+  }
+  .expert-details-container .expert-details-image {
+    height: 200px;
+    width: 200px;
+  }
+  .expert-details p {
+    font-size: 16px;
+    letter-spacing: 0.3px;
+  }
+
+  .details-div {
+    padding: 13px;
+    width: 480px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .expert-details h2 {
+    font-size: 16px;
+  }
+
+  .expert-details-container h1 {
+    font-size: 1.5rem;
+  }
+  .expert-details-container .expert-details-image {
+    height: 200px;
+    width: 200px;
+  }
+  .expert-details p {
+    font-size: 13px;
+    letter-spacing: 0.3px;
+  }
+
+  .details-div {
+    padding: 13px;
+    width: 380px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .expert-details h2 {
+    font-size: 16px;
+  }
+
+  .expert-details-container h1 {
+    font-size: 1.3rem;
+  }
+  .expert-details-container .expert-details-image {
+    height: 150px;
+    width: 150px;
+  }
+  .expert-details p {
+    font-size: 15px;
+  }
+
+  .details-div {
+    width: 300px;
+  }
+}
+
+.all-notifications {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+
+.regular-notifications,
+.reschedule-notifications {
+  flex: 1;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 18px;
+}
+
+.reschedule-notifications li {
+  padding: 1.5rem;
+}
+
+.notification-item {
+  margin-bottom: 20px;
+}
+
+.all-notifications h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #333;
+}
+
+.regular-notifications h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #0073e6;
+}
+
+p {
+  margin: 5px 0;
+}
+
+.buttons {
+  margin-top: 15px;
+}
+
+.accept-reschedule {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.accept,
+.reschedule {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 120px !important;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+.accept {
+  background-color: #4caf50;
+  color: white;
+}
+
+.accept:disabled,
+.reschedule:disabled {
+  background-color: grey;
+  color: white;
+  cursor: not-allowed;
+}
+
+.reschedule {
+  background-color: #0073e6;
+  color: white;
+}
+.accept:hover,
+.reschedule:hover {
+  opacity: 0.9;
+}
+
+.notify {
+  padding: 2rem;
+  background-color: #f0f4f8;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.notify h2 {
+  font-size: 1.8rem;
+  color: #333;
+  font-weight: bold;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .notify {
+    padding: 1.5rem;
+  }
+
+  .notify h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 928px) {
+  .all-notifications {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .notification-item {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .expert-details-buttons {
+    gap: 12px;
+  }
+
+  .details-options {
+    width: 35px;
+    height: 35px;
+  }
+  .accept-reschedule {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .accept,
+  .reschedule {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .expert-details-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .edit-btn {
+    width: 100% !important;
+    margin-bottom: 8px;
+  }
+
+  .details-options {
+    width: 30px;
+    height: 30px;
+    margin: 0 8px;
+  }
+
+  .icon-row {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 8px;
+  }
+}

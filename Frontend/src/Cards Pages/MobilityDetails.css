@@ -1,0 +1,126 @@
+.mobility-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 40px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: "Arial", sans-serif;
+}
+
+.mobility-heading {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.mobility-intro {
+  font-size: 1.2rem;
+  color: #34495e;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.mobility-subheading {
+  font-size: 1.8rem;
+  color: #2980b9;
+  margin: 20px 0 10px;
+  border-bottom: 2px solid #2980b9;
+  padding-bottom: 5px;
+}
+
+.mobility-services-list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.mobility-services-list li {
+  background: #ecf0f1;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+}
+
+.mobility-success-stories {
+  margin-bottom: 30px;
+}
+
+.mobility-story {
+  background: #c9ecf9;
+  margin: 10px 0;
+  padding: 15px;
+  border-left: 5px solid #5acdff;
+  border-radius: 5px;
+}
+
+.mobility-contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobility-contact-form label {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #34495e;
+}
+
+.mobility-contact-form input,
+.mobility-contact-form textarea {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.mobility-contact-form textarea:hover {
+  border: 1px solid #41bcde;
+}
+
+.mobility-submit-button {
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #60a4d2;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.mobility-submit-button:hover {
+  background-color: #41bcde;
+}
+
+@media (max-width: 600px) {
+  .mobility-container {
+    padding: 15px;
+    margin: 20px auto;
+  }
+
+  .mobility-heading {
+    font-size: 2rem;
+  }
+
+  .mobility-subheading {
+    font-size: 1.5rem;
+  }
+
+  .mobility-services-list li {
+    font-size: 1rem;
+  }
+
+  .mobility-contact-form input,
+  .mobility-contact-form textarea {
+    font-size: 0.9rem;
+  }
+
+  .mobility-submit-button {
+    font-size: 1rem;
+  }
+}

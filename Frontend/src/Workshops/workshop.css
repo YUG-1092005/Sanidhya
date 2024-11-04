@@ -1,0 +1,56 @@
+.fc-daygrid-event {
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.9rem;
+}
+.fc-toolbar-title {
+  font-size: 1.5em;
+}
+
+@media (max-width: 600px) {
+  .fc-toolbar-title {
+    font-size: 16px !important;
+  }
+  .fc-toolbar button {
+    font-size: 12px !important;
+    padding: 4px 6px;
+  }
+  .MuiDialogContent-root div {
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .fc-button.fc-today-button {
+    margin-top: 7px;
+  }
+
+  .fc-toolbar-title {
+    font-size: 1.2em;
+  }
+
+  .fc-col-header-cell-cushion {
+    font-size: 0.9em;
+    padding: 4px 8px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .fc-toolbar-title {
+    font-size: 1.3em;
+  }
+}
+
+@media (min-width: 1025px) {
+  .fc-toolbar-title {
+    font-size: 1.6em;
+  }
+}
+
+@media (max-width: 480px) {
+  .MuiDialog-paper {
+    width: 90% !important;
+  }
+}

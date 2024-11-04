@@ -1,0 +1,27 @@
+.join-video-btn-div {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+.join-video-btn,
+.hang-up-btn {
+  flex: 1;
+  max-width: 120px;
+}
+
+@media (max-width: 600px) {
+  .join-video-btn,
+  .hang-up-btn {
+    flex: none;
+    width: 100%;
+    margin: 0.2rem !important;
+  }
+
+  .join-video-btn-div {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

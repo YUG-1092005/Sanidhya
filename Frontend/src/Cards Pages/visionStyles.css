@@ -1,0 +1,147 @@
+.visionContainer {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  font-family: "Arial", sans-serif;
+  position: relative;
+}
+
+.visionHeading {
+  font-size: 2rem;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.visionIntro {
+  font-size: 1.2rem;
+  color: #34495e;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.visionSubheading {
+  font-size: 1.8rem;
+  color: #063a5c;
+  margin: 30px 0 10px;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+}
+
+.visionServicesList {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  line-height: 2rem;
+}
+
+.quizMainContainer {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f0f4f8;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.quizMainContainer:hover {
+  transform: scale(1.02);
+}
+
+.startButton,
+.stopButton {
+  background-color: #3498db;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  display: block;
+  margin: 20px auto;
+}
+
+.startButton:hover {
+  background-color: #2980b9;
+}
+
+.stopButton {
+  background-color: #e74c3c;
+}
+
+.stopButton:hover {
+  background-color: #c0392b;
+}
+
+.quizContainer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.question {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.quizStatus {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  margin: 10px 0;
+}
+
+.quizAnswer {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #0d6cab;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .visionContainer {
+    padding: 20px;
+  }
+
+  .visionHeading {
+    font-size: 2rem;
+  }
+
+  .visionIntro {
+    font-size: 1rem;
+  }
+
+  .visionSubheading {
+    font-size: 1.5rem;
+  }
+
+  .visionServicesList {
+    font-size: 1rem;
+  }
+
+  .quizMainContainer {
+    padding: 15px;
+  }
+
+  .startButton,
+  .stopButton {
+    padding: 12px 20px;
+    font-size: 1rem;
+  }
+
+  .question {
+    font-size: 1.2rem;
+  }
+
+  .quizStatus,
+  .quizAnswer {
+    font-size: 1rem;
+  }
+}
