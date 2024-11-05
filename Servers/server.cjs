@@ -24,6 +24,16 @@ app.use(
   })
 );
 
+if (process.env.VITE_NODE_ENV !== "production") {
+  // Start other servers in development mode only
+  require("concurrently")([
+    "npm start --prefix CallServer",
+    "npm start --prefix ChatServer",
+    "npm start --prefix EmailServer",
+  ]);
+}
+
+
 //Logging for error handling
 app.use((req, res, next) => {
   console.log(`Incoming Request: ${req.method} ${req.originalUrl}`);

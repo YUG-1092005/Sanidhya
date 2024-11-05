@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "start": "concurrently \"npm start --prefix CallServer\" \"npm start --prefix ChatServer\" \"npm start --prefix EmailServer\" \"node server.cjs\"",
+    "start": "node server.cjs",  
     "dev": "concurrently \"node CallServer/SocketContext.js\" \"node ChatServer/index.js\" \"node EmailServer/email.js\" \"node server.cjs\""
   },
   "keywords": [],
