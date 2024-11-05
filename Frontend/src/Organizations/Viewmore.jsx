@@ -41,7 +41,7 @@ const Viewmore = () => {
     const fetchOrgs = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:4000/organization/list"
+          `${import.meta.env.VITE_MAIN_SERVER_URL}/organization/list`
         );
         console.log(response.data.data);
         if (response.data.data) {
@@ -60,7 +60,7 @@ const Viewmore = () => {
     const fetchOrgFromBackend = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:4000/organization/org-details/${orgId}`
+          `${import.meta.env.VITE_MAIN_SERVER_URL}/organization/org-details/${orgId}`
         );
         const org = response.data;
         setOrgDetails(org || null);
@@ -98,7 +98,7 @@ const Viewmore = () => {
   useEffect(() => {
     const fetchCurrentUser = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/user/verify", {
+        const response = await axios.get(`${import.meta.env.VITE_MAIN_SERVER_URL}/user/verify`, {
           withCredentials: true,
         });
         if (response.data.success) {
@@ -120,7 +120,7 @@ const Viewmore = () => {
     const fetchNotifications = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:4000/organization/${orgId}/notifications`
+          `${import.meta.env.VITE_MAIN_SERVER_URL}/organization/${orgId}/notifications`
         );
         console.log("ID FOR ORG>>>>>", orgId);
         setNotificationsOrg(response.data);
@@ -136,7 +136,7 @@ const Viewmore = () => {
     const fetchReschedulingRequests = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:4000/organization/${orgId}/rescheduling-requests`
+          `${import.meta.env.VITE_MAIN_SERVER_URL}/organization/${orgId}/rescheduling-requests`
         );
         setReschedulingRequests(response.data);
       } catch (error) {
@@ -175,7 +175,7 @@ const Viewmore = () => {
   const handleDelete = async () => {
     try {
       const response = await axios.delete(
-        `http://localhost:4000/organization/${orgId}/remove`
+        `${import.meta.env.VITE_MAIN_SERVER_URL}/organization/${orgId}/remove`
       );
       console.log("org data:", response.data);
       if (response.data) {
@@ -193,7 +193,7 @@ const Viewmore = () => {
   const handleRescheduleAccept = async (requestId) => {
     try {
       const reschedulingResponse = await axios.get(
-        `http://localhost:4000/organization/${orgId}/rescheduling-requests`
+        `${import.meta.env.VITE_MAIN_SERVER_URL}/organization/${orgId}/rescheduling-requests`
       );
       console.log("Original request response:", reschedulingResponse.data);
       const originalRequests = reschedulingResponse.data;
@@ -205,7 +205,7 @@ const Viewmore = () => {
       }
 
       await axios.post(
-        "http://localhost:4000/call/accept-rescheduled-request",
+        `${import.meta.env.VITE_MAIN_SERVER_URL}/call/accept-rescheduled-request`,
         {
           expertName: originalRequest.expertName,
           organizationId: orgId,

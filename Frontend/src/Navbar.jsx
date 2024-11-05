@@ -31,7 +31,7 @@ const Navbar = ({ isAuthenticated, setIsAuthenticated }) => {
 
   const logout = async () => {
     try {
-      const response = await fetch("http://localhost:4000/user/logout", {
+      const response = await fetch(`${import.meta.env.VITE_MAIN_SERVER_URL}/user/logout`, {
         method: "POST",
         credentials: "include", // Include cookies
       });

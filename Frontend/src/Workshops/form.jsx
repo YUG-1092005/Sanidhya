@@ -22,7 +22,7 @@ const form = () => {
     try {
       // Call the backend API to send the email
       const response = await axios.post(
-        "http://localhost:3000/sanidhya/workshop/registration",
+        `${import.meta.env.VITE_EMAIL_SERVER_URL}/sanidhya/workshop/registration`,
         {
           name,
           email,

@@ -14,7 +14,7 @@ const List = () => {
     const fetchOrgs = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:4000/organization/list"
+          `${import.meta.env.VITE_MAIN_SERVER_URL}/organization/list`
         );
         console.log(response.data.data);
         setOrganizations(response.data.data);

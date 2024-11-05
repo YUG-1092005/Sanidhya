@@ -33,7 +33,7 @@ const RescheduleForm = ({ handleClose, orgID, requestId, id }) => {
       console.log(rescheduleData);
 
       const response = await axios.post(
-        `http://localhost:4000/call/rescheduling-request/${requestId}`,
+        `${import.meta.env.VITE_MAIN_SERVER_URL}/call/rescheduling-request/${requestId}`,
         rescheduleData,
         {
           headers: {

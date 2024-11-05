@@ -32,7 +32,7 @@ const Orgedit = () => {
     const fetchOrgs = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:4000/organization/list"
+          `${import.meta.env.VITE_MAIN_SERVER_URL}/organization/list`
         );
         setOrgs(response.data.data);
         if (!response.data.data) {
@@ -84,7 +84,7 @@ const Orgedit = () => {
     }
     try {
       const response = await axios.put(
-        `http://localhost:4000/organization/${orgId}/edit`,
+        `${import.meta.env.VITE_MAIN_SERVER_URL}/organization/${orgId}/edit`,
         formDataToSend,
         {
           headers: {

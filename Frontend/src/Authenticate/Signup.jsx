@@ -30,7 +30,7 @@ const Signup = ({ setIsAuthenticated }) => {
 
     try {
       const response = await axios.post(
-        "http://localhost:4000/user/register",
+        `${import.meta.env.VITE_MAIN_SERVER_URL}/user/register`,
         signupFormData,
         {
           headers: {

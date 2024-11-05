@@ -41,7 +41,7 @@ const Join = ({ onClose }) => {
   const createRoom = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:5000/chat/create-room",
+        `${import.meta.env.VITE_CHAT_SERVER_URL}/chat/create-room`,
         { roomId: room },
         {
           headers: {

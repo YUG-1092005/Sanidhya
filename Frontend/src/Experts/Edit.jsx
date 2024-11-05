@@ -32,7 +32,7 @@ const Edit = () => {
   useEffect(() => {
     const fetchExperts = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/expert/list");
+        const response = await axios.get(`${import.meta.env.VITE_MAIN_SERVER_URL}/expert/list`);
         setExperts(response.data.data);
         if (!response.data.data) {
           throw new Error("Failed to fetch experts");
@@ -84,7 +84,7 @@ const Edit = () => {
 
     try {
       const response = await axios.put(
-        `http://localhost:4000/expert/${id}/edit`,
+        `${import.meta.env.VITE_MAIN_SERVER_URL}/expert/${id}/edit`,
         formDataToSend,
         {
           headers: {

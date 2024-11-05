@@ -36,7 +36,7 @@ const Options = ({ children }) => {
 
       // Save Expert ID and Name
       const saveResponse = await axios.post(
-        "http://localhost:8080/connect/save-expert",
+        `${import.meta.env.VITE_CALL_SERVER_URL}/connect/save-expert`,
         {
           meetingId: newMeetingId,
           expertId: id,
@@ -72,7 +72,7 @@ const Options = ({ children }) => {
     const checkExpertId = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8080/connect/check-expert/${id}`
+          `${import.meta.env.VITE_CALL_SERVER_URL}/connect/check-expert/${id}`
         );
 
         console.log("GET /connect/check-expert response:", response.data);

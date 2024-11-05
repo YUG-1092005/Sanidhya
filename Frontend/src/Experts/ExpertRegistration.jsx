@@ -29,7 +29,7 @@ const ExpertRegistration = () => {
     const checkAuthentication = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:4000/organization/check-auth",
+          `${import.meta.env.VITE_MAIN_SERVER_URL}/organization/check-auth`,
           {
             withCredentials: true,
           }
@@ -81,7 +81,7 @@ const ExpertRegistration = () => {
   const checkExpertAuthentication = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:4000/organization/check-expert",
+        `${import.meta.env.VITE_MAIN_SERVER_URL}/organization/check-expert`,
         { withCredentials: true }
       );
 
@@ -130,7 +130,7 @@ const ExpertRegistration = () => {
   const checkOrganization = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:4000/organization/check-org-there",
+        `${import.meta.env.VITE_MAIN_SERVER_URL}/organization/check-org-there`,
         {
           withCredentials: true,
         }
@@ -194,7 +194,7 @@ const ExpertRegistration = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:4000/expert/registration",
+        `${import.meta.env.VITE_MAIN_SERVER_URL}/expert/registration`,
         form,
         {
           headers: {

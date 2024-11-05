@@ -20,7 +20,7 @@ const CallReqForm = ({ handleToggle, orgId }) => {
   useEffect(() => {
     const fetchExperts = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/expert/list");
+        const response = await axios.get(`${import.meta.env.VITE_MAIN_SERVER_URL}/expert/list`);
         setExperts(response.data.data);
       } catch (error) {
         console.error("Error fetching experts:", error);
@@ -44,7 +44,7 @@ const CallReqForm = ({ handleToggle, orgId }) => {
     console.log(requestData);
     try {
       await axios.post(
-        "http://localhost:4000/call/submit-call-request",
+        `${import.meta.env.VITE_MAIN_SERVER_URL}/call/submit-call-request`,
         requestData
       );
       toast.success("Request sent successfully!");

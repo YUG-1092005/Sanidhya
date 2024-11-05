@@ -16,7 +16,7 @@ const Chat = () => {
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
 
-  const ENDPOINT = "http://localhost:5000";
+  const ENDPOINT = `${import.meta.env.VITE_CHAT_SERVER_URL}`;
 
   const location = useLocation();
 

@@ -22,7 +22,7 @@ const RateExpert = ({ id, expertName, userId, userName }) => {
     const fetchRatings = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:4000/expert/ratings/${id}`
+          `${import.meta.env.VITE_MAIN_SERVER_URL}/expert/ratings/${id}`
         );
         setRatings(response.data);
       } catch (error) {
@@ -37,7 +37,7 @@ const RateExpert = ({ id, expertName, userId, userName }) => {
   const handleRatingSubmit = async () => {
     try {
       const response = await axios.post(
-        `http://localhost:4000/expert/rating/${id}`,
+        `${import.meta.env.VITE_MAIN_SERVER_URL}/expert/rating/${id}`,
         { userId, rating, userName }
       );
       toast.success("Rating submitted!");

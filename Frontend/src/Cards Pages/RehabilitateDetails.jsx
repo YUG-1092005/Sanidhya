@@ -22,7 +22,7 @@ export const RehabilitateDetails = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:3000/sanidhya/contactus",
+        `${import.meta.env.VITE_EMAIL_SERVER_URL}/sanidhya/contactus`,
         formData
       );
 

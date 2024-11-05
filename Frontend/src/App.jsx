@@ -25,7 +25,7 @@ function App() {
     // Verify if the user is already authenticated
     const verifyAuth = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/user/verify", {
+        const response = await axios.get(`${import.meta.env.VITE_MAIN_SERVER_URL}/user/verify`, {
           withCredentials: true, // Include cookies
         });
         if (response.data.success) {

@@ -55,7 +55,7 @@ const Expert = () => {
   useEffect(() => {
     const fetchExperts = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/expert/list");
+        const response = await axios.get(`${import.meta.env.VITE_MAIN_SERVER_URL}/expert/list`);
         if (response.data.success) {
           setExperts(response.data.data);
         } else {
@@ -71,7 +71,7 @@ const Expert = () => {
   useEffect(() => {
     const fetchCurrentUser = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/user/verify", {
+        const response = await axios.get(`${import.meta.env.VITE_MAIN_SERVER_URL}/user/verify`, {
           withCredentials: true,
         });
         if (response.data.success) {
@@ -94,7 +94,7 @@ const Expert = () => {
     const fetchExpertFromBackend = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:4000/expert/expert-details/${id}`
+          `${import.meta.env.VITE_MAIN_SERVER_URL}/expert/expert-details/${id}`
         );
         const expert = response.data;
         setExpertDetails(expert || null);
@@ -152,7 +152,7 @@ const Expert = () => {
     const getNotificationForExpert = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:4000/expert/${id}/notifications`
+          `${import.meta.env.VITE_MAIN_SERVER_URL}/expert/${id}/notifications`
         );
         setNotifications(response.data.notifications);
         console.log("notifications", response.data.notifications);
@@ -190,7 +190,7 @@ const Expert = () => {
     const fetchReschedulingRequests = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:4000/expert/${id}/rescheduling-requests`
+          `${import.meta.env.VITE_MAIN_SERVER_URL}/expert/${id}/rescheduling-requests`
         );
         setRescheduledNotifications(response.data);
         console.log("RESCHEDULED:", response.data);
@@ -227,7 +227,7 @@ const Expert = () => {
   const handleDelete = async () => {
     try {
       const response = await axios.delete(
-        `http://localhost:4000/expert/${id}/remove`
+        `${import.meta.env.VITE_MAIN_SERVER_URL}/expert/${id}/remove`
       );
       console.log("Expert deleted:", response.data);
       if (response.data) {
@@ -245,7 +245,7 @@ const Expert = () => {
   const handleAcceptRequest = async (requestId, id) => {
     try {
       await axios.post(
-        `http://localhost:4000/call/accept-request/${requestId}`,
+        `${import.meta.env.VITE_MAIN_SERVER_URL}/call/accept-request/${requestId}`,
         { expertId: id },
         {
           headers: {
