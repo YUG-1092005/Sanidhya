@@ -2,14 +2,14 @@
     "version": 2,
     "builds": [
       {
-        "src": "SocketContext.js",
+        "src": "CallServer/SocketContext.js",
         "use": "@vercel/node"
       }
     ],
     "routes": [
       {
-        "src": "/call/(.*)",
-        "dest": "SocketContext.js"
+        "src": "/connect/(.*)",
+        "dest": "CallServer/SocketContext.js"
       }
     ]
   }
