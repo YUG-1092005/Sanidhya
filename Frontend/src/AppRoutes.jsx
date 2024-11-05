@@ -78,7 +78,7 @@ const AppRoutes = ({ setIsAuthenticated }) => {
             <Route path="/expert/list" element={<Experts />} />
             <Route path="/sanidhya/workshops" element={<Workshop />} />
             <Route
-              path="/sanidhya/workshop/registration"
+              path="/sanidhya/event/registration"
               element={<WorkshopForm />}
             />
             <Route path="/expert/:id" element={<Expert />} />
