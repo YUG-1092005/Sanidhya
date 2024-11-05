@@ -1,0 +1,16 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "SocketContext.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/call/(.*)",
+        "dest": "SocketContext.js"
+      }
+    ]
+  }
+  
