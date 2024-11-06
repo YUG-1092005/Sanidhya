@@ -2,7 +2,7 @@ const express = require("express");
 const { ExpressPeerServer } = require("peer");
 const cors = require("cors");
 const expertVideoId = require("./expertVideoModel");
-const connectDB = require("../config/db.cjs");
+const connectDB = require("./db.cjs");
 require("dotenv").config({ path: __dirname + "/../.env" });
 
 const app = express();
