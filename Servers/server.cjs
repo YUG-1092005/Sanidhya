@@ -18,11 +18,19 @@ app.use(express.json({ limit: "200mb" }));
 app.use(express.urlencoded({ limit: "200mb", extended: true }));
 app.use(
   cors({
-    origin: `https://sanidhya-official.netlify.app/`,
+    origin: (origin, callback) => {
+      // Match the origin with or without the trailing slash
+      if (origin === "https://sanidhya-official.netlify.app" || origin === "https://sanidhya-official.netlify.app/") {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
   })
 );
+
 
 // if (process.env.VITE_NODE_ENV !== "production") {
 //   // Start other servers in development mode only
