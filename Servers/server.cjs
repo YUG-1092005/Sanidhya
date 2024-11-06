@@ -20,7 +20,7 @@ app.use(
   cors({
     origin: (origin, callback) => {
       // Match the origin with or without the trailing slash
-      if (origin === "https://sanidhya-official.netlify.app" || origin === "https://sanidhya-official.netlify.app/") {
+      if (origin === "https://sanidhya-official.netlify.app" || origin === "https://sanidhya-official.netlify.app/" || origin==="http://localhost:5173") {
         callback(null, true);
       } else {
         callback(new Error("Not allowed by CORS"));

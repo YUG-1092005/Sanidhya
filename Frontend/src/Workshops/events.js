@@ -6,7 +6,7 @@ export const events = [
     end: "2024-01-15T12:00:00",
     description: "A workshop that teaches the basics of accessibility.",
     location: "Online (Zoom)",
-    registrationLink: "/sanidhya/workshop/registration",
+    registrationLink: "/sanidhya/event/registration",
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ export const events = [
     end: "2024-03-20T16:00:00",
     description: "Hands-on training on using assistive technology.",
     location: "Community Center, Room 101, Rajkot/Online (Zoom)",
-    registrationLink: "/sanidhya/workshop/registration",
+    registrationLink: "/sanidhya/event/registration",
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ export const events = [
     end: "2024-04-05T12:00:00",
     description: "Learn how to incorporate inclusive design principles into your projects.",
     location: "Online (Webinar)",
-    registrationLink: "/sanidhya/workshop/registration",
+    registrationLink: "/sanidhya/event/registration",
   },
   {
     id: 5,
@@ -51,7 +51,7 @@ export const events = [
     end: "2024-06-20T11:00:00",
     description: "Strategies for career advancement for individuals with disabilities.",
     location: "Online (Google Meet)",
-    registrationLink: "/sanidhya/workshop/registration",
+    registrationLink: "/sanidhya/event/registration",
   },
   {
     id: 7,
@@ -60,7 +60,7 @@ export const events = [
     end: "2024-07-15T17:00:00",
     description: "A session on the rights of physically impaired individuals and how to advocate for them.",
     location: "Online (Zoom)",
-    registrationLink: "/sanidhya/workshop/registration",
+    registrationLink: "/sanidhya/event/registration",
   },
   {
     id: 8,
@@ -69,7 +69,7 @@ export const events = [
     end: "2024-08-08T12:00:00",
     description: "A session on mental health challenges and solutions for the disabled community.",
     location: "Online (Webinar)",
-    registrationLink: "/sanidhya/workshop/registration",
+    registrationLink: "/sanidhya/event/registration",
   },
   {
     id: 9,
@@ -87,7 +87,7 @@ export const events = [
     end: "2024-10-20T13:00:00",
     description: "Workshop on creating websites and documents that are accessible to everyone.",
     location: "Online (Google Meet)",
-    registrationLink: "/sanidhya/workshop/registration",
+    registrationLink: "/sanidhya/event/registration",
   },
   {
     id: 11,

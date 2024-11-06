@@ -12,7 +12,8 @@ app.use(
     origin: (origin, callback) => {
       if (
         origin === "https://sanidhya-official.netlify.app" ||
-        origin === "https://sanidhya-official.netlify.app/"
+        origin === "https://sanidhya-official.netlify.app/" ||
+        origin === "http://localhost:5173"
       ) {
         callback(null, true);
       } else {
@@ -24,7 +25,7 @@ app.use(
   })
 );
 
-app.options("*", cors()); 
+app.options("*", cors());
 const PORT = process.env.VITE_PEER_JS_PORT;
 
 connectDB();
@@ -43,7 +44,7 @@ app.get("/connect/check-expert/:id", async (req, res) => {
         exists: true,
         expertId: expert.expertId,
         expertName: expert.expertName,
-        meetingId: expert.meetingId, 
+        meetingId: expert.meetingId,
       });
     } else {
       return res.json({ exists: false });

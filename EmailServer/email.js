@@ -15,7 +15,8 @@ app.use(
     origin: (origin, callback) => {
       if (
         origin === "https://sanidhya-official.netlify.app" ||
-        origin === "https://sanidhya-official.netlify.app/"
+        origin === "https://sanidhya-official.netlify.app/" ||
+        origin === "http://localhost:5173"
       ) {
         callback(null, true);
       } else {
