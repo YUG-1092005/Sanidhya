@@ -1,4 +1,3 @@
-// models/Expert.js
 const mongoose = require("mongoose");
 
 const expertVideoSchema = new mongoose.Schema({
