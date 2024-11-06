@@ -23,6 +23,10 @@ const Workshop = () => {
     setSelectedEvent(info.event);
   };
 
+  const baseDomain = "https://sanidhya-official.netlify.app";
+  const registrationLink = `${baseDomain}${selectedEvent.extendedProps.registrationLink}`;
+
+
   const renderEventContent = (eventInfo) => (
     <Tooltip title={eventInfo.event.title} arrow style={{ fontSize: "18px" }}>
       <div
@@ -90,7 +94,7 @@ const Workshop = () => {
             <div>{`Location: ${selectedEvent.extendedProps.location}`}</div>
             <div>{`Description: ${selectedEvent.extendedProps.description}`}</div>
             <a
-              href={selectedEvent.extendedProps.registrationLink}
+              href={registrationLink}
               target="_blank"
               rel="noopener noreferrer"
               style={{
