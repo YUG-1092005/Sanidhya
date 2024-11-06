@@ -2,12 +2,12 @@ const express = require("express");
 const app = express();
 const socketIo = require("socket.io");
 const http = require("http");
-const messageModel = require("../models/messageModel.js");
+const messageModel = require("./messageModel.js");
 const messageRouter = require("./Routes/messageRouter.js");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 require("dotenv").config({ path: __dirname + "/../.env" });
-const connectDB = require("../config/db.cjs");
+const connectDB = require("./db.cjs");
 const { addUser, removeUser, getUser, getUsersInRoom } = require("./Users.js");
 
 connectDB();

@@ -1,7 +1,7 @@
 const express = require("express");
 const messageRouter = express.Router();
 const roomModel = require("../../models/roomModel");
-const messageModel = require("../../models/messageModel");
+const messageModel = require("../messageModel.js");
 const { getUser } = require("../Users.js");
 
 messageRouter.post("/create-room", async (req, res) => {
