@@ -3,8 +3,8 @@ const app = express();
 const cors = require("cors");
 const nodemailer = require("nodemailer");
 require("dotenv").config({ path: __dirname + "/../.env" });
-const workshopRegistrationModel = require("../models/workshopRegistration");
-const connectDB = require("../config/db.cjs");
+const workshopRegistrationModel = require("./workshopRegistration");
+const connectDB = require("./db.cjs");
 
 const PORT = process.env.VITE_EMAIL_PORT;
 
