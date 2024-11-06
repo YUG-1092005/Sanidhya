@@ -9,11 +9,21 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: `https://sanidhya-official.netlify.app/`,
+    origin: (origin, callback) => {
+      if (
+        origin === "https://sanidhya-official.netlify.app" ||
+        origin === "https://sanidhya-official.netlify.app/"
+      ) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
     credentials: true,
     methods: ["GET", "POST", "OPTIONS"],
   })
 );
+
 app.options("*", cors()); 
 const PORT = process.env.VITE_PEER_JS_PORT;
 
