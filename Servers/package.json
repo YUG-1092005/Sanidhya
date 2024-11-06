@@ -4,7 +4,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.cjs",  
-    "dev": "concurrently \"node CallServer/SocketContext.js\" \"node ChatServer/index.js\" \"node EmailServer/email.js\" \"node server.cjs\""
+    "dev": "node server.cjs"
   },
   "keywords": [],
   "author": "",
