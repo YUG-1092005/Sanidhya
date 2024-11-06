@@ -96,7 +96,7 @@ export const events = [
     end: "2024-12-03T16:00:00",
     description: "Celebrate achievements and progress in disability inclusion.",
     location: "Community Hall, Rajkot",
-    registrationLink: "/sanidhya/event/registration",
+    registrationLink: "https://sanidhya-official.netlify.app/sanidhya/event/registration",
   },
   {
     id: 12,
