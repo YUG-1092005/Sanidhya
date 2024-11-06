@@ -12,7 +12,7 @@ connectDB();
 
 app.use(
   cors({
-    origin: `https://sanidhya-co.netlify.app/`,
+    origin: `https://sanidhya-official.netlify.app/`,
     methods: ["GET", "POST", "OPTIONS"],
     allowedHeaders: ["Content-Type"],
     credentials: true,
