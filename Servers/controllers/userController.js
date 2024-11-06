@@ -77,12 +77,12 @@ const loginUser = async (req, res) => {
     const user = await userModel.findOne({ email });
 
     if (!user) {
-      return res.json({ success: false, message: "User does not exist" });
+      return res.status(404).json({ success: false, message: "User does not exist" });
     }
 
     const matchCredits = await bcrypt.compare(password, user.password);
     if (!matchCredits) {
-      return res.json({
+      return res.status(401).json({
         success: false,
         message: "Either email or password invalid",
       });
@@ -91,21 +91,22 @@ const loginUser = async (req, res) => {
     const token = jwtToken(user._id);
     res.cookie("token", token, {
       httpOnly: true,
-      sameSite: "Strict",
-      secure: process.env.VITE_NODE_ENV === "production",
-      maxAge: 24 * 60 * 60 * 1000,
+      sameSite: process.env.NODE_ENV === "production" ? "None" : "Strict",
+      secure: process.env.NODE_ENV === "production",
+      maxAge: 24 * 60 * 60 * 1000, // 1 day in milliseconds
     });
 
-    return res.json({
+    return res.status(200).json({
       success: true,
       token,
       user: { _id: user._id, name: user.name, email: user.email },
     });
   } catch (error) {
-    console.log(error);
-    res.json({ success: false, message: "Error while logging user" });
+    console.error(error);
+    res.status(500).json({ success: false, message: "Error while logging user" });
   }
 };
+
 
 //Log out user function
 const logoutUser = (req, res) => {
