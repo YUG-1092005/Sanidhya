@@ -9,6 +9,9 @@ import { Tooltip, Dialog, DialogTitle, DialogContent } from "@mui/material";
 const Workshop = () => {
   const [selectedEvent, setSelectedEvent] = useState(null);
 
+  const baseUrl = "https://sanidhya-official.netlify.app";
+
+
   const formattedEvents = events.map((event) => ({
     id: event.id,
     title: event.title,
@@ -90,7 +93,7 @@ const Workshop = () => {
             <div>{`Location: ${selectedEvent.extendedProps.location}`}</div>
             <div>{`Description: ${selectedEvent.extendedProps.description}`}</div>
             <a
-              href={selectedEvent.extendedProps.registrationLink}
+              href={`${baseUrl}${selectedEvent.extendedProps.registrationLink}`}
               target="_blank"
               rel="noopener noreferrer"
               style={{
