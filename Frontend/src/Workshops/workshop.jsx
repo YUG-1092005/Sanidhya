@@ -25,7 +25,7 @@ const Workshop = () => {
 
   const baseDomain = "https://sanidhya-official.netlify.app";
   const registrationLink = `${baseDomain}${selectedEvent.extendedProps.registrationLink}`;
-
+console.log("Regis Link",registrationLink);
 
   const renderEventContent = (eventInfo) => (
     <Tooltip title={eventInfo.event.title} arrow style={{ fontSize: "18px" }}>
