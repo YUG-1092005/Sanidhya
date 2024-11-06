@@ -12,12 +12,22 @@ connectDB();
 
 app.use(
   cors({
-    origin: `https://sanidhya-official.netlify.app/`,
+    origin: (origin, callback) => {
+      if (
+        origin === "https://sanidhya-official.netlify.app" ||
+        origin === "https://sanidhya-official.netlify.app/"
+      ) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
     methods: ["GET", "POST", "OPTIONS"],
     allowedHeaders: ["Content-Type"],
     credentials: true,
   })
 );
+
 app.use(express.json());
 
 //Workshop registration
