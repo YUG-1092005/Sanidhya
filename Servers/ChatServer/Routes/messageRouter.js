@@ -1,6 +1,6 @@
 const express = require("express");
 const messageRouter = express.Router();
-const roomModel = require("../../models/roomModel");
+const roomModel = require("../roomModel.js");
 const messageModel = require("../messageModel.js");
 const { getUser } = require("../Users.js");
 
