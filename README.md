@@ -12,10 +12,10 @@ Sanidhya is a MERN (MongoDB, Express, React, Node.js) stack-based web applicatio
   - Facilitate communication between experts and organizations using a chat feature.
   
 - **Workshops**: 
-  - Organizations can host workshops aimed at empowering individuals with disabilities.
+  - Organizations can attend workshops aimed at empowering individuals with disabilities.
   
 - **Voice Quiz**: 
-  - A voice-based quiz designed to help visually impaired individuals improve their daily lives.
+  - A basic voice-based quiz designed to help visually impaired individuals improve their daily lives.
   - Supports multi-language options for better accessibility.
 
 ## Tech Stack
@@ -25,6 +25,7 @@ Sanidhya is a MERN (MongoDB, Express, React, Node.js) stack-based web applicatio
   - MUI (Material UI)
   - PeerJS (for video calls)
   - Styled Components (for custom styling)
+  - Many more libraries too..
   
 - **Backend**:
   - Node.js
