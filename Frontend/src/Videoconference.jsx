@@ -43,7 +43,7 @@ const ContextProvider = ({ children }) => {
     console.log("MEETING ID", meetingId);
     const peer = new Peer(meetingId, {
       host: "sanidhya-1.onrender.com",
-      port: 8080,
+      port: 443,
       path: "/",
       debug: 3,
       secure: true,
