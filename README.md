@@ -52,5 +52,8 @@ Make sure you have the following installed:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/sanidhya.git
-   cd sanidhya
+   git clone https://github.com/YUG-1092005/Sanidhya.git
+   cd Sanidhya
+
+### Key Additions:
+- **Website Refinement in Progress...**
