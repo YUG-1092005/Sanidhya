@@ -53,7 +53,7 @@ const Options = ({ children }) => {
       console.log("POST /connect/save-expert response:", saveResponse.data);
 
       if (saveResponse.data.success) {
-        navigate(`/sanidhya/expert-call/${id}`);
+        navigate(`/expert/${id}`);
         toast.success("Your ID and Name saved successfully!", {
           autoClose: 2000,
         });
