@@ -35,7 +35,7 @@ const Experts = () => {
   useEffect(() => {
     const fetchExperts = async () => {
       try {
-        const response = await axios.get(`${process.env.VITE_MAIN_SERVER_PORT}/expert/list`);
+        const response = await axios.get(`${import.meta.env.VITE_MAIN_SERVER_PORT}/expert/list`);
         setExperts(response.data.data);
       } catch (error) {
         console.log("Error fetching experts:", error);
