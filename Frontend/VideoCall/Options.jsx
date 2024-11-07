@@ -55,10 +55,8 @@ const Options = ({ children }) => {
       if (saveResponse.data.success) {
         toast.success("Your ID and Name saved successfully!", {
           autoClose: 2000,
+          onClose: () => navigate(`/sanidhya/expert-call/${id}`)
         });
-        setTimeout(() => {
-          navigate(`/sanidhya/expert-call/${id}`);
-        }, 500);
       } else {
         toast.error("Expert ID not found.");
         console.log("POST error data:", saveResponse.data);
