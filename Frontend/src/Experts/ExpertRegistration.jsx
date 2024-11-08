@@ -116,9 +116,11 @@ const ExpertRegistration = () => {
             draggable: true,
             progress: undefined,
             theme: "dark",
+            onClose: () => {
+              navigate("/expert/list");
+            },
           });
           setHasShownExpertToast(true);
-          navigate("/expert/list");
         }
       } else {
         toast.error("Failed to check expert authentication");
