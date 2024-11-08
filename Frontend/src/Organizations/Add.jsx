@@ -88,6 +88,7 @@ const Add = () => {
       if (!response.data.authenticated) {
         if (!hasShownExpertToast) {
           toast.error("Experts are not allowed to add organization", {
+            autoClose: 2000,
             onClose: () => {
               navigate("/expert/list"); 
             },
