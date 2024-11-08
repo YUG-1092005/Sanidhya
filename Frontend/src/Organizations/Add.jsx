@@ -90,7 +90,7 @@ const Add = () => {
           toast.error("Experts are not allowed to add organization", {
             autoClose: 2000,
             onClose: () => {
-              navigate("/expert/list"); 
+              navigate("/expert/list");
             },
           });
           setHasShownExpertToast(true);
@@ -142,8 +142,10 @@ const Add = () => {
           draggable: true,
           progress: undefined,
           theme: "dark",
+          onClose: () => {
+            navigate(`/organization/list`);
+          },
         });
-        navigate(`/organization/list`);
         setIsAuthenticated(false);
       } else {
         toast.error("Failed to check organization");
